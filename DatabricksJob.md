@@ -4,7 +4,7 @@ These instructions are based on the [Leverage Azure Databricks jobs orchestratio
 
 I went through their instructions and made a few minor changes.  These are included in the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory Template.
 
-If you do not have a Databricks Job already created, you can use the following instructions to create one that can be utilized in the steps below: 
+If you do not have a Databricks Job already created, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
 
 To utilize it, download it to your computer and install it to your Azure Data Factory instance using the following instructions: 
 1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
@@ -19,10 +19,7 @@ To utilize it, download it to your computer and install it to your Azure Data Fa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.  Open your Job under Workflows of the Left Navigation Bar and click your job on the Jobs tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.  Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL.  <br>
-For example, you want to take the bolded portion of this URL for your Databricks Workspace ID.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
-
+&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of this URL... https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When finished, your parameters should look like the following...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobParameters.png" alt="Job Parameters" width="600">
