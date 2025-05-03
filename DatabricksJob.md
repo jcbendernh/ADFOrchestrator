@@ -26,7 +26,7 @@ To utilize it, download it to your computer and install it to your Azure Data Fa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When finished, your parameters should look like the following...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
-7. Last of you will need to add your Azure Data Factory Managed Identity to your Databricks workspace and give it the proper permissions to execute a Job.  For this grant Contributor role to the Managed Identity in the Azure Databricks Access Control (IAM) blade of the Azure Portal.<br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="600">
+7. Last of you will need to add your Azure Data Factory Managed Identity to your Databricks workspace and give it the proper permissions to execute a Job.  For this grant Contributor role to the Managed Identity in the Azure Databricks Access Control (IAM) blade of the Azure Portal.<br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
 
 
 
