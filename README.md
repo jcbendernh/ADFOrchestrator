@@ -13,8 +13,8 @@ Azure Data Factory is needed for a variety of reasons.
 
 Below are links for the following scenarios.  I have also created Azure Data Factory Templates for your convenience.
 
-- Run an Azure Databricks Job
-- Run an Azure Databricks DLT Pipeline
+- [Run an Azure Databricks Job](DatabricksJob.md)
+- [Run an Azure Databricks DLT Pipeline](DatabricksDLTPipeline.md)
 - Run a Microsoft Fabric Data Pipeline
 - Run a Microsoft Fabric Data Notebook
 
