@@ -7,24 +7,26 @@ I went through their instructions and made a few minor changes.  These are inclu
 If you do not have a Databricks Job already created, you can use the following instructions to create one that can be utilized in the steps below: 
 
 To utilize it, download it to your computer and install it to your Azure Data Factory instance using the following instructions: 
-1) Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
-2) On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
-3) In the Template gallery, click on the <b>Import pipeline template</b> in the upper right.
-4) Once it is installed in the gallery, select it and click <b>Continue</b>.
-<img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="300">
-5) On the <b>Execute Databricks Job using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
-6) This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;a) <b>JobID:</b> This can be found on the Job Details tab of your Job.<br> 
+1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
+2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
+3. In the Template gallery, click on the <b>Import pipeline template</b> in the upper right.
+4. Once it is installed in the gallery, select it and click <b>Continue</b>.<br>
+<img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200">
+5. On the <b>Execute Databricks Job using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
+6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a. <b>JobID:</b> This can be found on the Job Details tab of your Job.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.  Open your Job under Workflows of the Left Navigation Bar and click your job on the Jobs tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.  Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;b) <b>DatabricksWorkspaceID:</b> This is in the Databricks URL.  For example, you want to take the bolded portion of this URL for your Databricks Workspace ID.
+&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL.  For example, you want to take the bolded portion of this URL for your Databricks Workspace ID.
    https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
-   
-When finished, your parameters should look like the following...
-<img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When finished, your parameters should look like the following...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobParameters.png" alt="Job Parameters" width="600">
+
+7. Last of you will need to add your Azure Data Factory Managed Identity to your Databricks workspace and give it the proper permissions to execute a Job.  For this grant Contributor role to the Managed Identity in the Azure Databricks Access Control (IAM) blade of the Azure Portal.<br>
+<img src="img/ADFRBAC.png" alt="ADF RBAC" width="600">
 
 
 
