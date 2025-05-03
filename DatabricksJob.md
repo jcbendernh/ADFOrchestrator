@@ -19,8 +19,8 @@ To utilize it, download it to your computer and install it to your Azure Data Fa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.  Open your Job under Workflows of the Left Navigation Bar and click your job on the Jobs tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.  Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL.  For example, you want to take the bolded portion of this URL for your Databricks Workspace ID.
-   https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
+&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL.  For example, you want to take the bolded portion of this URL for your Databricks Workspace ID.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When finished, your parameters should look like the following...<br>
