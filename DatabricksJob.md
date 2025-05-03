@@ -11,7 +11,8 @@ To utilize it, download it to your computer and install it to your Azure Data Fa
 2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click on the <b>Import pipeline template</b> in the upper right.
 4. Once it is installed in the gallery, select it and click <b>Continue</b>.<br>
-<img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200">
+<img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200"><br>
+
 5. On the <b>Execute Databricks Job using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
 6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;a. <b>JobID:</b> This can be found on the Job Details tab of your Job.<br> 
