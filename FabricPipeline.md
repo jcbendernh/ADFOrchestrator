@@ -9,8 +9,7 @@ Here is an overview of the Data Factory Pipeline<br>&nbsp;<br>
 <img src="img/ADFFabricPipelineOverview.png" alt="Pipeline Overview" width="800">
 
 
-The template utilizes the the following Fabric REST API call:
-- [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP)
+The template utilizes the the following Fabric REST API call: [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP)
 
 ## Prerequisites
 - Azure Service Principal
