@@ -10,7 +10,7 @@ For DLT Pipelines I have modified their instructions to accommodate utilizing th
 
 The result of this is included in the [Execute Databricks Pipeline using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Pipeline%20using%20MI.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template.  You only need to follow the steps below.
 
-If you do not have a Databricks DLT Pipeline already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+If you do not have a Databricks DLT Pipeline already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Tutorial: Run your first DLT pipeline](https://learn.microsoft.com/en-us/azure/databricks/dlt/tutorial-pipelines)
 
 ## Instructions
 To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
