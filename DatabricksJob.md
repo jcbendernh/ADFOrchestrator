@@ -10,10 +10,10 @@ The template utilizes the REST calls to the Databricks API utilizing the followi
 
 ## Prerequisites
 1. You will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900"><br>&nbsp;<br>
-2. If you do not have a Databricks Job already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+2. If you do not have an existing Databricks Job already to run this against, you can use the following instructions to create one: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
 
 ## Instructions
-To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
+To utilize the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
 1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
 2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
