@@ -42,15 +42,16 @@ To utilize the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh
 6. This will bring you to the editor screen of the Pipeline.  You will need to modify the following values on the <b>Parameters</b> tab of the overall pipeline to use it.
     1. <b>FabricAPI:</b> https://api.fabric.microsoft.com/v1
     2. <b>WorkspaceGUID:</b> This GUID listed in your workspace URL just after groups. For example, it would be the highlighted value in this URL<br>
-    app.fabric.microsoft.com/groups/<mark>abcd1234-5678-4c77-a92a-b0ec8058a6de</mark>/list?experience=fabric-developer<br>&nbsp;<br>
+    app.fabric.microsoft.com/groups/<mark>abcd1234-5678-4c77-a92a-b0ec8058a6de</mark>/list?experience=fabric-developer
     3. <b>NotebookGUID:</b> This GUID listed in your workspace URL just after synapsenotebooks. For example, it would be the highlighted value in this URL<br>
     app.fabric.microsoft.com/groups/abcd1234-5678-4c77-a92a-b0ec8058a6de/synapsenotebooks/<mark>efgh9876-5432-40a1-bd30-b1a937683c50</mark>?experience=fabric-developer
     4. <b>AKVTenantID:</b> SPADF-TenantID
     5. <b>AKVCLientID:</b> SPADF-ClientID
     6. <b>AKVSecret:</b> SPADF-Secret
     7. <b>KeyVault:</b> The <b>Vault URI</b> value on the Overview Tab of your Azure Key Vault instance in the Azure Portal.<br>
-    For example - https://adfkeyvault.vault.azure.net/
-    When finished, your parameters should look like the screenshot below.<br><img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
+    For example - https://adfkeyvault.vault.azure.net/<br>&nbsp;<br>
+
+When finished, your parameters should look like the screenshot below.<br><img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
 
 ## Overview of the steps
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
