@@ -15,7 +15,7 @@ Below are links for the following scenarios with instructions on how to use the 
 - [Run a Microsoft Fabric Data Pipeline](FabricPipeline.md)
 - [Run a Microsoft Fabric Data Notebook](FabricNotebook.md)
 
-Below is a Diagram of this approach.  Hope this helps.
+Below is a Diagram of this approach.  I hope you find this useful.
 
 <img src="img/ADFOrchestrate.png" alt="ADF Orchestrate" width="800">
 
