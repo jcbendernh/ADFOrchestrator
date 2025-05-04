@@ -17,6 +17,6 @@ Below are links for the following scenarios with instructions on how to use the 
 
 Below is a Diagram of this approach.  Hope this helps.
 
-<img src="img/ADFOrchestrate.png" alt="ADF Orchestrate" width="600">
+<img src="img/ADFOrchestrate.png" alt="ADF Orchestrate" width="800">
 
 
