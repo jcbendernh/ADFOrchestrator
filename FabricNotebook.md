@@ -6,7 +6,7 @@
 These instructions allow you to execute a Fabric Notebook from Azure Data Factory.  The result of this is included in the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Fabric%20Notebook%20using%20SPN.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template. You only need to follow the steps below.
 
 Here is an overview of the Data Factory Pipeline<br>&nbsp;<br>
-<img src="img/ADFFabricNotebookOverview.png" alt="Pipeline Overview" width="800">
+<img src="img/ADFFabricNotebookOverview.png" alt="Pipeline Overview" width="900">
 
 
 The template utilizes the the following Fabric REST API call: [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP)
@@ -49,25 +49,25 @@ To utilize the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh
     5. <b>AKVCLientID:</b> SPADF-ClientID
     6. <b>AKVSecret:</b> SPADF-Secret
     7. <b>KeyVault:</b> The <b>Vault URI</b> value on the Overview Tab of your Azure Key Vault instance in the Azure Portal.<br>
-    For example - https://adfkeyvault.vault.azure.net/<br>&nbsp;<br>
+    For example - https://adfkeyvault.vault.azure.net/
 
 When finished, your parameters should look like the screenshot below.<br><img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
 
 ## Overview of the steps
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
-<img src="img/ADFFabricNotebookOverview.png" alt="Pipeline Overview" width="800">
+<img src="img/ADFFabricNotebookOverview.png" alt="Fabric Notebook Overview" width="900">
 
-1. <b>Web Activity - Get TenantID from AKV</b>: Retrieve the SPADF-TenantID secret from Azure Key Vault.<BR>
+1. <b>Web Activity - Get TenantID from AKV</b>: Retrieves the SPADF-TenantID secret from Azure Key Vault.<BR>
 NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
 2. <b>Web Activity - Get ClientID from AKV</b>: Retrieves the SPADF-ClientID secret from Azure Key Vault.<BR>
 NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
 3. <b>Web Activity - Get Secret from AKV</b>: Retrieves the SPADF-Secret secret from Azure Key Vault.<BR>
 NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
-4. <b>Web Activity - Generate Access Token</b>: Retrieves an access token for the SPN via the OAuth 2.0 token endpoint.<BR>
+4. <b>Web Activity - Generate Access Token</b>: Retrieves an access token for the SPN via the Entra ID OAuth 2.0 token endpoint.<BR>
 NOTE: This utilizes the SPN created to make the REST call.
 5. <b>Web Activity - Run Fabric Notebook</b>: Utilizes the [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP) Fabric REST API to trigger the specific Notebook within your Fabric workspace.<BR>
 NOTE: This utilizes the SPN access token created in step 4 to make the REST call.
 6. <b>If Condition - If Notebook execution failed:</b> If the output status of the <b>Web Activity - Run Fabric Notebook</b> equals "Failed" it triggers the <b>Fail the Pipeline</b> activity.
-    1. <b>Fail the pipeline:</b> Write the following values:
+    1. <b>Fail the pipeline:</b> Writes the following values:
         1. <b>Fail Message:</b> Run Fabric Notebook activity output failureReason.message
         2. <b>Error Code:</b> Run Fabric Notebook activity output failureReason.errorCode
