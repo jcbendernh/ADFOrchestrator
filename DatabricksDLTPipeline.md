@@ -1,7 +1,7 @@
 # Run an Azure Databricks DLT Pipeline
 
 ## Overview
-These instructions are an adaption of the [Leverage Azure Databricks Pipelines orchestration from Azure Data Factory](https://techcommunity.microsoft.com/blog/analyticsonazure/leverage-azure-databricks-Pipelines-orchestration-from-azure-data-factory/3123862) article that was published in Feb 22 by [Clinton W Ford](https://www.linkedin.com/in/clintonwford/) and [Leo Furlong](https://www.linkedin.com/in/leoafurlongiv/) from Databricks. 
+These instructions are an adaption of the [Leverage Azure Databricks Pipelines orchestration from Azure Data Factory](https://techcommunity.microsoft.com/blog/analyticsonazure/leverage-azure-databricks-Pipelines-orchestration-from-azure-data-factory/3123862) article that was published in Feb 22 by [Clinton W Ford](https://www.linkedin.com/in/clintonwford/) and [Leo Furlong](https://www.linkedin.com/in/leoafurlongiv/). 
 
 For DLT Pipelines I have modified their instructions to accommodate utilizing the following REST calls: 
 - [Start a pipeline](https://docs.databricks.com/api/azure/workspace/pipelines/startupdate)
