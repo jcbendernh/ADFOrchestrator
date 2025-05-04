@@ -1,4 +1,4 @@
-# Using Azure Dta Factory as an Orchestrator for Azure Databricks and Microsoft Fabric
+# Using Azure Data Factory as an Orchestrator for Azure Databricks and Microsoft Fabric
 
 I have multiple customers that use a blended approach of both Azure Databricks and Microsoft Fabric. In most cases they are using Azure Data Factory as the primary ingestion engine from their source data to their Raw/Bronze environment.  
 
