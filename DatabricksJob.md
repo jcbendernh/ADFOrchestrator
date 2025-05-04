@@ -31,7 +31,7 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 7. Finally, you will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
 
 ## Overview of the steps
-Below are the overview of the steps utilized in this template.
+Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
 <img src="img/JobOverview.png" alt="Job Overview" width="600">
 
 1. <b>Web Activity - Execute Jobs API</b>: Utilizes the [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow) Databricks REST API to trigger the specific Workflow/Job within your Databricks workspace.
