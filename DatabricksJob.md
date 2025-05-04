@@ -34,8 +34,10 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 Below are the overview of the steps utilized in this template.
 <img src="img/JobOverview.png" alt="Job Overview" width="600">
 
-1. <b>Web Activity - Execute Jobs API</b>: Utilizes the [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow) Databricks REST API to trigger the specific Workflow/Job within Databricks.
-2. <b>Until Activity - Wait Until Job Completes</b>: Creates a loop of checking the state of the job until it is marking no longer "RUNNING"
-    1. <b>Web Activity - Check Job Run API</b>: This first step within the Utilizes the [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow) Databricks REST API to trigger the specific Workflow/Job within Databricks.
+1. <b>Web Activity - Execute Jobs API</b>: Utilizes the [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow) Databricks REST API to trigger the specific Workflow/Job within your Databricks workspace.
+2. <b>Until Activity - Wait Until Job Completes</b>: Creates a loop of checking the state of the job until it is not equal to "RUNNING".
+    1. <b>Web Activity - Check Job Run API</b>: This utilizes the [Get a single job run](https://docs.databricks.com/api/azure/workspace/jobs/getrun) Databricks REST API to retrieve the Job State of the specific Workflow/Job within Databricks.
+    2. <b>Variable Activity - Check Job Status</b>: Applies an iif statement to identify the job as either RUNNING or not equal to RUNNING
+    3. <b>Wait Activity - Wait to Recheck API</b>: Waits "x" seconds based on the overall pipeline parameter of <b>WaitSeconds</b> 
 
 
