@@ -8,7 +8,9 @@ The template utilizes the REST calls to the Databricks API utilizing the followi
 - [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow)
 - [Get a single job run](https://docs.databricks.com/api/azure/workspace/jobs/getrun)
 
-If you do not have a Databricks Job already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+## Prerequisites
+1. You will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900"><br>&nbsp;<br>
+2. If you do not have a Databricks Job already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
 
 ## Instructions
 To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
@@ -27,8 +29,6 @@ To utilize the Azure Data Factory template, download it to your computer and ins
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the screenshot below.<br><img src="img/JobParameters.png" alt="Job Parameters" width="600">
-
-7. Finally, you will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
 
 ## Overview of the steps
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>

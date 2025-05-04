@@ -13,7 +13,7 @@ Below are links for the following scenarios with instructions on how to use the 
 - [Run an Azure Databricks Job](DatabricksJob.md)
 - [Run an Azure Databricks DLT Pipeline](DatabricksDLTPipeline.md)
 - [Run a Microsoft Fabric Data Pipeline](FabricPipeline.md)
-- [Run a Microsoft Fabric Data Notebook](FabricNotebook.md)
+- [Run a Microsoft Fabric Notebook](FabricNotebook.md)
 
 Below is a Diagram of this approach.  I hope you find this useful.
 

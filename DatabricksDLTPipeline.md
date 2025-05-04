@@ -10,7 +10,9 @@ For DLT Pipelines I have modified their instructions to accommodate utilizing th
 
 The result of this is included in the [Execute Databricks Pipeline using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Pipeline%20using%20MI.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template.  You only need to follow the steps below.
 
-If you do not have a Databricks DLT Pipeline already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Tutorial: Run your first DLT pipeline](https://learn.microsoft.com/en-us/azure/databricks/dlt/tutorial-pipelines)
+## Prerequisites
+1. You will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900"><br>&nbsp;<br>
+2. If you do not have a Databricks DLT Pipeline already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Tutorial: Run your first DLT pipeline](https://learn.microsoft.com/en-us/azure/databricks/dlt/tutorial-pipelines)
 
 ## Instructions
 To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
@@ -28,7 +30,6 @@ To utilize the Azure Data Factory template, download it to your computer and ins
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the screenshot below.<br><img src="img/PipelineParameters.png" alt="Pipeline Parameters" width="600"><br>&nbsp;<br>
-7. Finally, you will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Pipeline.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
 
 ## Overview of the steps
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
