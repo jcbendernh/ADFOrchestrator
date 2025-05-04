@@ -19,13 +19,13 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 <img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200"><br>
 
 5. On the <b>Execute Databricks Job using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
-6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;a. <b>JobID:</b> The Databricks Job ID - This can be found on the Job Details tab of your Job.<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i.  Open your Job under Workflows of the Left Navigation Bar and click your job on the Jobs tab.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii.  Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;b. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
+6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
+    1. <b>JobID:</b> The Databricks Job ID - This can be found on the Job Details tab of your Job.<br> 
+        1. Open your Job under Workflows of the Left Navigation Bar and click your job on the Jobs tab.
+        2. Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
+        <img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
+    2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
+    https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When finished, your parameters should look like the following...<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobParameters.png" alt="Job Parameters" width="600">
