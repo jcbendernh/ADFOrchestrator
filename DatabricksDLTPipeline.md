@@ -3,15 +3,14 @@
 ## Overview
 These instructions are an adaption of the [Leverage Azure Databricks jobs orchestration from Azure Data Factory](https://techcommunity.microsoft.com/blog/analyticsonazure/leverage-azure-databricks-jobs-orchestration-from-azure-data-factory/3123862) article that was published in Feb 22 by [Clinton W Ford](https://www.linkedin.com/in/clintonwford/) and [Leo Furlong](https://www.linkedin.com/in/leoafurlongiv/) from Databricks. 
 
-For the DLT Pipelines I have modified their instructions to accomodate utilizing the 
+For DLT Pipelines I have modified their instructions to accommodate utilizing the following REST calls: 
+- [Start a pipeline](https://docs.databricks.com/api/azure/workspace/pipelines/startupdate)
+- [List pipeline updates](https://docs.databricks.com/api/azure/workspace/pipelines/listupdates)
+- [Get a pipeline update](https://docs.databricks.com/api/azure/workspace/pipelines/getupdate)
 
-and made a few minor changes.  The result of this is included in the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template.  You only need to follow the steps below.
+The result of this is included in the [Execute Databricks Pipeline using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Pipeline%20using%20MI.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template.  You only need to follow the steps below.
 
-The template utilizes the REST calls to the Databricks API utilizing the following:
-- [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow)
-- [Get a single job run](https://docs.databricks.com/api/azure/workspace/jobs/getrun)
-
-If you do not have a Databricks Job already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+If you do not have a Databricks DLT Pipeline already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
 
 ## Instructions
 To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
