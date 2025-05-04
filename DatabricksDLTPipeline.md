@@ -34,10 +34,12 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
 <img src="img/PipelineOverview.png" alt="Pipeline Overview" width="600">
 
-1. <b>Web Activity - Execute Pipelines API</b>: Utilizes the [Trigger a new Pipeline run](https://docs.databricks.com/api/azure/workspace/Pipelines/runnow) Databricks REST API to trigger the specific Workflow/Pipeline within your Databricks workspace.<BR>
+1. <b>Web Activity - Execute Start Pipeline API</b>: Utilizes the [Start a pipeline](https://docs.databricks.com/api/azure/workspace/pipelines/startupdate) Databricks REST API to trigger the specific DLT Pipeline within your Databricks workspace.<BR>
 NOTE: This utilizes the universal Managed Identity of the Databricks service to make the REST call.
 2. <b>Until Activity - Wait Until Pipeline Completes</b>: Creates a loop of checking the state of the Pipeline until it is not equal to "RUNNING".
-    1. <b>Web Activity - Check Pipeline Run API</b>: This utilizes the [Get a single Pipeline run](https://docs.databricks.com/api/azure/workspace/Pipelines/getrun) Databricks REST API to retrieve the Pipeline State of the specific Workflow/Pipeline.<br>
+    1. <b>Web Activity - List pipeline updates API</b>: This utilizes the [List pipeline updates](https://docs.databricks.com/api/azure/workspace/pipelines/listupdates) Databricks REST API to retrieve the Update ID of the specific DLT Pipeline.<br>
     NOTE: This utilizes the universal Managed Identity of the Databricks service to make the REST call.
-    2. <b>Variable Activity - Check Pipeline Status</b>: Applies an iif statement to identify the Pipeline as either "RUNNING" or not "RUNNING".
-    3. <b>Wait Activity - Wait to Recheck API</b>: Waits "x" seconds based on the  pipeline parameter of <b>WaitSeconds</b>. 
+    2. <b>Web Activity - Get a pipeline update API</b>: This utilizes the [Get a pipeline update](https://docs.databricks.com/api/azure/workspace/pipelines/getupdate) Databricks REST API to retrieve the Update State of the specific Workflow/Pipeline.<br>
+    NOTE: This utilizes the universal Managed Identity of the Databricks service to make the REST call.
+    3. <b>Variable Activity - Check Pipeline Status</b>: Applies an iif statement to identify the Pipeline as either "RUNNING" or not "RUNNING".
+    4. <b>Wait Activity - Wait to Recheck API</b>: Waits "x" seconds based on the  pipeline parameter of <b>WaitSeconds</b>. 
