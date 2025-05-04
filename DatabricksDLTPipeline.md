@@ -16,9 +16,9 @@ If you do not have a Databricks DLT Pipeline already created to run this against
 To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
 1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
 2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
-3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right.
+3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
 4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery<br>&nbsp;<br>
-<img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200"><br>
+<img src="img/ExecuteDatabricksPipelinesusingMI.png" alt="Execute Databricks Pipelines using MI" width="200"><br>
 
 5. On the <b>Execute Databricks Job using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
 6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
