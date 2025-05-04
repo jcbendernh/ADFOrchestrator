@@ -26,8 +26,7 @@ To utilize the Azure Data Factory template, download it to your computer and ins
         <img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
-    When finished, your parameters should look like the following...<br>
-    <img src="img/JobParameters.png" alt="Job Parameters" width="600">
+    When finished, your parameters should look like the screenshot below.<br><img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
 7. Finally, you will need to add your <b>Azure Data Factory Managed Identity</b> to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br>&nbsp;</br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
 
