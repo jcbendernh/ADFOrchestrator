@@ -21,10 +21,9 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 <img src="img/ExecuteDatabricksPipelineusingMI.png" alt="Execute Databricks Pipelines using MI" width="200"><br>
 
 5. On the <b>Execute Databricks Pipeline using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
-6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
-    1. <b>PipelineID:</b> The Databricks Pipeline ID - This can be found on the Pipeline Details tab of your Pipeline.<br> 
-        1. Open your Pipeline under Workflows of the Left Navigation Bar and click your Pipeline on the Pipelines tab.
-        2. Once the Pipeline is open, copy the Pipeline ID in the upper right corner under the Pipeline detail tab.<br>
+6. This will bring you to the editor screen of the ADF Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
+    1. <b>PipelineID:</b> The Databricks Pipeline ID - This can be found on the Pipeline Listing within your Databricks Workspace.<br> 
+        1. Click on <b>Pipelines</b> in the Navigation Bar and copy the ID value in the listing.<br>
         <img src="img/PipelineID.png" alt="Pipeline ID" width="300"><br>&nbsp;<br>
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
