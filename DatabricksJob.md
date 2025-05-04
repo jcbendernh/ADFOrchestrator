@@ -25,8 +25,7 @@ To utilize the Azure Data Factory template, download it to your computer and ins
         2. Once the Job is open, copy the Job ID in the upper right corner under the Job detail tab.<br>
         <img src="img/JobID.png" alt="Job ID" width="300"><br>&nbsp;<br>
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
-    https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/
-
+    https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the following...<br>
     <img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
