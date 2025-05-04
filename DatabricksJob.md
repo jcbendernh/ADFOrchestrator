@@ -14,8 +14,8 @@ The template utilizes the REST calls to the Databricks API utilizing the followi
 
 ## Instructions
 To utilize the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
-1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
-2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
+1. Within your Azure Data Factory workspace, click the <b>Home</b> button at the top of the left navigation bar.
+2. On the home page, click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
 4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery<br>&nbsp;<br>
 <img src="img/ExecuteDatabricksJobusingMI.png" alt="Execute Databricks Job using MI" width="200"><br>

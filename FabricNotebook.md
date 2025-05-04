@@ -27,24 +27,24 @@ The template utilizes the the following Fabric REST API call: [Job Scheduler - R
         3. SPADF-Secret = Client secret value from Step 2 above
 4. <b>Key Vault Linked Service in Azure Data Factory</b> - Create the Linked Service using the following article: [Store credentials in Azure Key Vault](https://learn.microsoft.com/en-us/azure/data-factory/store-credentials-in-key-vault)<br>NOTE: For step 2 of the article, follow the <b>Access control</b> option. 
 5. <b>Enable SPN authentication for Fabric API</b> - Enable SPN access to Fabric via the Admin Portal using the following article: [Enable service principal authentication for admin APIs](https://learn.microsoft.com/en-us/fabric/admin/enable-service-principal-admin-apis)
-6. If you do not have an existing Fabric Notebook to run this against, you can use the following instructions to create one: [Ingest data with Spark and Microsoft Fabric notebooks](https://github.com/MicrosoftLearning/mslearn-fabric/blob/main/Instructions/Labs/10-ingest-notebooks.md)<br>NOTE: Test this notebook manually to ensure all cells work as expected.
+6. If you do not have an existing Fabric Notebook to run this against, you can use the following instructions to create one: [Ingest data with Spark and Microsoft Fabric notebooks](https://github.com/MicrosoftLearning/mslearn-fabric/blob/main/Instructions/Labs/10-ingest-notebooks.md).
 
 
 ## Instructions
 To utilize the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Fabric%20Notebook%20using%20SPN.zip) Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
-1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
-2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
+1. Within your Azure Data Factory workspace, click the <b>Home</b> button at the top of the left navigation bar.
+2. On the home page, click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
 4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery<br>&nbsp;<br>
 <img src="img/ExecuteFabricNotebookusingSPN.png" alt="Execute Fabric Notebook using SPN" width="200"><br>
 
 5. On the <b>Execute Fabric Notebook using SPN</b> screen, click the <b>Use this template</b> button in the bottom left.
-6. This will bring you to the editor screen of the Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
+6. This will bring you to the editor screen of the Pipeline.  You will need to modify the following values on the <b>Parameters</b> tab of the overall pipeline to use it.
     1. <b>FabricAPI:</b> https://api.fabric.microsoft.com/v1
-    2. <b>WorkspaceGUID:</b> This GUID listed in your workspace URL just after groups. For example, it would be the bolded value in this URL<br>
-    app.fabric.microsoft.com/groups/<b>abcd1234-5678-4c77-a92a-b0ec8058a6de</b>/list?experience=fabric-developer<br>&nbsp;<br>
-    3. <b>NotebookGUID:</b> This GUID listed in your workspace URL just after synapsenotebooks. For example, it would be the bolded value in this URL<br>
-    app.fabric.microsoft.com/groups/abcd1234-5678-4c77-a92a-b0ec8058a6de/synapsenotebooks/<b>efgh9876-5432-40a1-bd30-b1a937683c50</b>?experience=fabric-developer
+    2. <b>WorkspaceGUID:</b> This GUID listed in your workspace URL just after groups. For example, it would be the highlighted value in this URL<br>
+    app.fabric.microsoft.com/groups/<mark>abcd1234-5678-4c77-a92a-b0ec8058a6de</mark>/list?experience=fabric-developer<br>&nbsp;<br>
+    3. <b>NotebookGUID:</b> This GUID listed in your workspace URL just after synapsenotebooks. For example, it would be the highlighted value in this URL<br>
+    app.fabric.microsoft.com/groups/abcd1234-5678-4c77-a92a-b0ec8058a6de/synapsenotebooks/<mark>efgh9876-5432-40a1-bd30-b1a937683c50</mark>?experience=fabric-developer
     4. <b>AKVTenantID:</b> SPADF-TenantID
     5. <b>AKVCLientID:</b> SPADF-ClientID
     6. <b>AKVSecret:</b> SPADF-Secret
