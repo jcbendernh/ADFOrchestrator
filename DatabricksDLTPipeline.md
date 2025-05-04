@@ -17,14 +17,14 @@ To utilize the Azure Data Factory template, download it to your computer and ins
 1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
 2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
-4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery<br>&nbsp;<br>
+4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery.<br>&nbsp;<br>
 <img src="img/ExecuteDatabricksPipelineusingMI.png" alt="Execute Databricks Pipelines using MI" width="200"><br>
 
 5. On the <b>Execute Databricks Pipeline using MI</b> screen, click the <b>Use this template</b> button in the bottom left.
 6. This will bring you to the editor screen of the ADF Pipeline.  You will need to modify 2 values on the <b>Parameters</b> tab of the overall pipeline to use it.
     1. <b>PipelineID:</b> The Databricks Pipeline ID - This can be found on the Pipeline Listing within your Databricks Workspace.<br> 
-        1. Click on <b>Pipelines</b> in the Navigation Bar and copy the ID value in the listing.<br>
-        <img src="img/PipelineID.png" alt="Pipeline ID" width="800"><br>&nbsp;<br>
+        1. Click on <b>Pipelines</b> in the Navigation Bar and copy the ID value in the listing.<br>&nbsp;<br>
+        <img src="img/PipelineID.png" alt="Pipeline ID" width="900">
     2. <b>DatabricksWorkspaceID:</b> This is in the Databricks URL. For example, you want to take the bolded portion of the following URL<br> 
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the screenshot below.<br><img src="img/PipelineParameters.png" alt="Pipeline Parameters" width="600">
