@@ -2,11 +2,15 @@
 
 These instructions are based on the [Leverage Azure Databricks jobs orchestration from Azure Data Factory](https://techcommunity.microsoft.com/blog/analyticsonazure/leverage-azure-databricks-jobs-orchestration-from-azure-data-factory/3123862) article that was published in Feb 22 by [Clinton W Ford](https://www.linkedin.com/in/clintonwford/) and [Leo Furlong](https://www.linkedin.com/in/leoafurlongiv/) from Databricks. 
 
-I went through their instructions and made a few minor changes.  These are included in the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory Template within this repo.
+I went through their instructions and made a few minor changes.  The result of this is included in the [Execute Databricks Job using MI](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Databricks%20Job%20using%20MI.zip) Azure Data Factory Template within this repo. Thus, you do not need to build this pipeline from scratch, all the steps are already included in the template.  You only need to follow the steps below.
 
-If you do not have a Databricks Job already created, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+The template is makes REST calls to the Databricks API utilizing the Jobs API.  Specifically the following APIs:
+- [Trigger a new job run](https://docs.databricks.com/api/azure/workspace/jobs/runnow)
+- [Get a single job run](https://docs.databricks.com/api/azure/workspace/jobs/getrun)
 
-To utilize it, download it to your computer and install it to your Azure Data Factory instance using the following instructions: 
+If you do not have a Databricks Job already created to run this against, you can use the following instructions to create one that can be utilized in the steps below: [Create your first workflow with an Azure Databricks job](https://learn.microsoft.com/en-us/azure/databricks/jobs/jobs-quickstart)
+
+To utilize the Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following instructions: 
 1. Within your Azure Data Factory workspace, Click the <b>Home</b> button at the top of the left navigation bar.
 2. On the home page click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
 3. In the Template gallery, click on the <b>Import pipeline template</b> in the upper right.
@@ -25,6 +29,4 @@ To utilize it, download it to your computer and install it to your Azure Data Fa
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
 7. Last of you will need to add your Azure Data Factory Managed Identity to your Databricks workspace and give it the proper permissions to execute a Job.  To do so, grant the <b>Contributor</b> RBAC role to the Managed Identity in the Azure Databricks <b>Access Control (IAM)</b> blade of the Azure Portal.<br> <img src="img/ADFRBAC.png" alt="ADF RBAC" width="900">
-
-
 
