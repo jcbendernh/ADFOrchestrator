@@ -1,4 +1,5 @@
 # Run an Azure Databricks Job
+
 ## Overview
 These instructions are based on the [Leverage Azure Databricks jobs orchestration from Azure Data Factory](https://techcommunity.microsoft.com/blog/analyticsonazure/leverage-azure-databricks-jobs-orchestration-from-azure-data-factory/3123862) article that was published in Feb 22 by [Clinton W Ford](https://www.linkedin.com/in/clintonwford/) and [Leo Furlong](https://www.linkedin.com/in/leoafurlongiv/). 
 
