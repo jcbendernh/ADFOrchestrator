@@ -4,7 +4,7 @@ I have multiple customers that use a blended approach of both Azure Databricks a
 
 This is because it can handle private connections to both on-premise and Azure Virtual Network / Private Endpoints easier than Databricks and Fabric and has the ability to share its Self Hosted Integration Runtime across multiple environments.
 
-This poses the question of "how do you orchestrate all of these technologies?"
+This poses the question of <b>how do you orchestrate all of these technologies?</b>
 
 Since both Azure Databricks and Microsoft fabric have the ability to trigger assets and workflows via their rest APIs, <b>we can use Azure Data Factory as that orchestration engine</b>.   
 
