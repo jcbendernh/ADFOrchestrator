@@ -22,9 +22,9 @@ The template utilizes the the following Fabric REST API call: [Job Scheduler - R
     1. Create a Key Vault using the following article: [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal)
     2. Add yourself as a <b>Key Vault Administrator</b> and <b>Key Vault Secrets Officer</b> to the RBAC permissions of the newly created Key Vault using the following article: [Provide access to Key Vault keys, certificates, and secrets with Azure role-based access control](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide?tabs=azure-portal)
     3. Add the following secrets to your Key Vault instance using the following article: [Quickstart: Set and retrieve a secret from Azure Key Vault using the Azure portal](https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal)
-        1. SPADF-TenantID = Directory (tenant) ID from Step 1 above
-        2. SPADF-ClientID = Application (client) ID from Step 1 above
-        3. SPADF-Secret = Client secret value from Step 2 above
+        1. SPADF-TenantID = Directory (tenant) ID from Step 1-i above
+        2. SPADF-ClientID = Application (client) ID from Step 1-i above
+        3. SPADF-Secret = Client secret value from Step 1-ii above
 4. <b>Key Vault Linked Service in Azure Data Factory</b> - Create the Linked Service using the following article: [Store credentials in Azure Key Vault](https://learn.microsoft.com/en-us/azure/data-factory/store-credentials-in-key-vault)<br>NOTE: For step 2 of the article, follow the <b>Access control</b> option. 
 5. <b>Enable SPN authentication for Fabric API</b> - Enable SPN access to Fabric via the Admin Portal using the following article: [Enable service principal authentication for admin APIs](https://learn.microsoft.com/en-us/fabric/admin/enable-service-principal-admin-apis)
 6. If you do not have an existing Fabric Notebook to run this against, you can use the following instructions to create one: [Ingest data with Spark and Microsoft Fabric notebooks](https://github.com/MicrosoftLearning/mslearn-fabric/blob/main/Instructions/Labs/10-ingest-notebooks.md).
@@ -48,10 +48,11 @@ To utilize the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh
     4. <b>AKVTenantID:</b> SPADF-TenantID
     5. <b>AKVCLientID:</b> SPADF-ClientID
     6. <b>AKVSecret:</b> SPADF-Secret
-    7. <b>KeyVault:</b> The <b>Vault URI</b> value on the Overview Tab of your Azure Key Vault instance in the Azure Portal.<br>
+    7. <b>KeyVault:</b> The <b>Vault URI</b> value on the Overview tab of your Azure Key Vault instance in the Azure Portal.<br>
     For example - https://adfkeyvault.vault.azure.net/
 
-When finished, your parameters should look like the screenshot below.<br><img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
+When finished, your parameters should look like the screenshot below.<br>&nbsp;<br>
+<img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
 
 ## Overview of the steps
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
