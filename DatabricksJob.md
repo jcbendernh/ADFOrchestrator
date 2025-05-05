@@ -30,7 +30,7 @@ To utilize the [Execute Databricks Job using MI](https://github.com/jcbendernh/A
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the screenshot below.<br><img src="img/JobParameters.png" alt="Job Parameters" width="600">
 
-## Overview of the steps
+## ADF Pipeline Summary
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
 <img src="img/JobOverview.png" alt="Job Overview" width="600">
 

@@ -27,4 +27,28 @@ The template utilizes the the following Fabric REST API call: [Job Scheduler - R
         3. SPADF-Secret = Client secret value from Step 1-ii above
 4. <b>Key Vault Linked Service in Azure Data Factory</b> - Create the Linked Service using the following article: [Store credentials in Azure Key Vault](https://learn.microsoft.com/en-us/azure/data-factory/store-credentials-in-key-vault)<br>NOTE: For step 2 of the article, follow the <b>Access control</b> option. 
 5. <b>Enable SPN authentication for Fabric API</b> - Enable SPN access to Fabric via the Admin Portal using the following article: [Enable service principal authentication for admin APIs](https://learn.microsoft.com/en-us/fabric/admin/enable-service-principal-admin-apis)
-6. If you do not have an existing Fabric Notebook to run this against, you can use the following instructions to create one: [Ingest data with Spark and Microsoft Fabric notebooks](https://github.com/MicrosoftLearning/mslearn-fabric/blob/main/Instructions/Labs/10-ingest-notebooks.md).
+6. If you do not have an existing Fabric Data Pipeline to run this against, you can use the following instructions to create one: [Ingest data with Spark and Microsoft Fabric notebooks](https://github.com/MicrosoftLearning/mslearn-fabric/blob/main/Instructions/Labs/10-ingest-notebooks.md).
+
+## Instructions
+To utilize the [Execute Fabric Pipeline using SPN](https://github.com/jcbendernh/ADFOrchestrator/blob/main/files/Execute%20Fabric%20Pipeline%20using%20SPN.zip) Azure Data Factory template, download it to your computer and install it within your Azure Data Factory instance using the following steps: 
+1. Within your Azure Data Factory workspace, click the <b>Home</b> button at the top of the left navigation bar.
+2. On the home page, click <b>Pipeline Templates</b> under the <b>Discover more</b> section at the bottom of the page.
+3. In the Template gallery, click the <b>Import pipeline template</b> in the upper right and upload the zipped file.
+4. Once it is installed in the gallery, select it and click <b>Continue</b>. The following screenshot shows what it will look like in the gallery<br>&nbsp;<br>
+<img src="img/ExecuteFabricPipelineusingSPN.png" alt="Execute Fabric Pipeline using SPN" width="200"><br>
+
+5. On the <b>Execute Fabric Pipeline using SPN</b> screen, click the <b>Use this template</b> button in the bottom left.
+6. This will bring you to the editor screen of the Pipeline.  You will need to modify the following values on the <b>Parameters</b> tab of the overall pipeline to use it.
+    1. <b>FabricAPI:</b> https://api.fabric.microsoft.com/v1
+    2. <b>WorkspaceGUID:</b> This GUID listed in your workspace URL just after groups. For example, it would be the highlighted value in this URL<br>
+    app.fabric.microsoft.com/groups/<mark>abcd1234-5678-4c77-a92a-b0ec8058a6de</mark>/list?experience=fabric-developer
+    3. <b>PipelineGUID:</b> This GUID listed in your workspace URL just after pipelines. For example, it would be the highlighted value in this URL<br>
+    app.fabric.microsoft.com/groups/abcd1234-5678-4c77-a92a-b0ec8058a6de/pipelines/<mark>8910abcd-1234-5600-9fc0-356252ab25aa</mark>?experience=fabric-developer
+    4. <b>AKVTenantID:</b> SPADF-TenantID
+    5. <b>AKVCLientID:</b> SPADF-ClientID
+    6. <b>AKVSecret:</b> SPADF-Secret
+    7. <b>KeyVault:</b> The <b>Vault URI</b> value on the Overview tab of your Azure Key Vault instance in the Azure Portal.<br>
+    For example - https://adfkeyvault.vault.azure.net/
+
+When finished, your parameters should look like the screenshot below.<br>&nbsp;<br>
+<img src="img/FabricPipelineParamaters.png" alt="Fabric Pipeline Parameters" width="600">

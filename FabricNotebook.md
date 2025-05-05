@@ -52,7 +52,7 @@ To utilize the [Execute Fabric Notebook using SPN](https://github.com/jcbendernh
 When finished, your parameters should look like the screenshot below.<br>&nbsp;<br>
 <img src="img/NotebookParameters.png" alt="Notebook Parameters" width="600">
 
-## Overview of the steps
+## ADF Pipeline Summary
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
 <img src="img/ADFFabricNotebookOverview.png" alt="Fabric Notebook Overview" width="900">
 

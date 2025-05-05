@@ -31,7 +31,7 @@ To utilize the [Execute Databricks Pipeline using MI](https://github.com/jcbende
     https://<b>adb-1235678910111213.8.</b>azuredatabricks.net/<br>&nbsp;<br>
     When finished, your parameters should look like the screenshot below.<br><img src="img/PipelineParameters.png" alt="Pipeline Parameters" width="600"><br>&nbsp;<br>
 
-## Overview of the steps
+## ADF Pipeline Summary
 Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
 <img src="img/PipelineOverview.png" alt="Pipeline Overview" width="600">
 
