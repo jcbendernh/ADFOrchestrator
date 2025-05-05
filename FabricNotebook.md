@@ -7,7 +7,7 @@ Here is an overview of the Data Factory Pipeline<br>&nbsp;<br>
 <img src="img/ADFFabricNotebookOverview.png" alt="Pipeline Overview" width="900">
 
 
-The template utilizes the the following Fabric REST API call: [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP)
+The template utilizes the the following Fabric REST API call: [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP) with the <b>jobType=RunNotebook</b>.
 
 ## Prerequisites
 1. <b>Azure Service Principal</b> - We can use an Azure Service Principal (SPN) to make REST calls to the Fabric API. To do so, follow these steps.
