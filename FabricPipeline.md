@@ -52,3 +52,22 @@ To utilize the [Execute Fabric Pipeline using SPN](https://github.com/jcbendernh
 
 When finished, your parameters should look like the screenshot below.<br>&nbsp;<br>
 <img src="img/FabricPipelineParamaters.png" alt="Fabric Pipeline Parameters" width="600">
+
+## ADF Pipeline Summary
+Below are the overview of the steps utilized in this template.<br>&nbsp;<br>
+<img src="img/ADFFabricPipelineOverview.png" alt="Pipeline Overview" width="900">
+
+1. <b>Web Activity - Get TenantID from AKV</b>: Retrieves the SPADF-TenantID secret from Azure Key Vault.<BR>
+NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
+2. <b>Web Activity - Get ClientID from AKV</b>: Retrieves the SPADF-ClientID secret from Azure Key Vault.<BR>
+NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
+3. <b>Web Activity - Get Secret from AKV</b>: Retrieves the SPADF-Secret secret from Azure Key Vault.<BR>
+NOTE: This utilizes the Managed Identity of the Azure Data Factory service to make the REST call.
+4. <b>Web Activity - Generate Access Token</b>: Retrieves an access token for the SPN via the Entra ID OAuth 2.0 token endpoint.<BR>
+NOTE: This utilizes the SPN created to make the REST call.
+5. <b>Web Activity - Run Fabric Pipeline</b>: Utilizes the [Job Scheduler - Run On Demand Item Job](https://learn.microsoft.com/en-us/rest/api/fabric/core/job-scheduler/run-on-demand-item-job?tabs=HTTP) Fabric REST API to trigger the specific Pipeline within your Fabric workspace.<BR>
+NOTE: This utilizes the SPN access token created in step 4 to make the REST call.
+6. <b>If Condition - If Pipeline execution failed:</b> If the output status of the <b>Web Activity - Run Fabric Pipeline</b> equals "Failed" it triggers the <b>Fail the Pipeline</b> activity.
+    1. <b>Fail the pipeline:</b> Writes the following values:
+        1. <b>Fail Message:</b> Run Fabric Pipeline activity output failureReason.message
+        2. <b>Error Code:</b> Run Fabric Pipeline activity output failureReason.errorCode
