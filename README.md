@@ -1,5 +1,7 @@
 # Using Azure Data Factory as an Orchestrator for Azure Databricks and Microsoft Fabric
 
+**May 2025**
+
 I have multiple customers that use a blended approach of both Azure Databricks and Microsoft Fabric. In most cases they are using Azure Data Factory as the primary ingestion engine from their source data to their raw/bronze environment.  
 
 This is because it can handle private connections to both on-premises and Azure Virtual Network / Private Endpoints easier than Databricks and Fabric and has the ability to share its Self Hosted Integration Runtime across multiple environments.
@@ -14,6 +16,8 @@ Below are links for the following scenarios with instructions on how to use the 
 - [Run an Azure Databricks DLT Pipeline](DatabricksDLTPipeline.md)
 - [Run a Microsoft Fabric Data Pipeline](FabricPipeline.md)
 - [Run a Microsoft Fabric Notebook](FabricNotebook.md)
+
+Also, if you want to add a failure notification to any of your ADF Pipelines, check out another repo I created last year: [Azure Data Factory Alerts](https://github.com/jcbendernh/ADFAlerts)
 
 Below is a Diagram of this approach.  I hope you find this useful.
 
